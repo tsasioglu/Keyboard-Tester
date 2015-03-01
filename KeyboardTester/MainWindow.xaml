@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:keyboard="clr-namespace:KeyboardTester"
-        Title="MainWindow" 
+        Title="Keyboard Tester" 
         MaxHeight="250" MaxWidth="715"
         mc:Ignorable="d" 
         d:DesignHeight="250"
