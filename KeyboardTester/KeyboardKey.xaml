@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="KeyboardTester.KeyboardKey"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d:DataContext="{d:DesignData keyboard:KeyboardKey}"
+             x:Name="UserControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="30">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style x:Key="KeyStyle" TargetType="{x:Type TextBlock}">
+                <Setter Property="Background" Value="Wheat" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding ViewModel.PreviouslyPressed}" Value="True">
+                        <Setter Property="Background" Value="DodgerBlue" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding ViewModel.Pressed}" Value="True">
+                        <Setter Property="Background" Value="Blue" />
+                        <Setter Property="Foreground" Value="White" />
+                    </DataTrigger>
+
+                    <DataTrigger Binding="{Binding DefaultPadding}" Value="True">
+                        <Setter Property="Padding" Value="10" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding DefaultPadding}" Value="False">
+                        <Setter Property="Padding" Value="{Binding PaddingOverride}" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <TextBlock Margin="1"
+               x:Name="KeyTextBlock"
+               Text="{Binding Text}" 
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               TextAlignment="Center"
+               Style="{StaticResource KeyStyle}"/>
+</UserControl>

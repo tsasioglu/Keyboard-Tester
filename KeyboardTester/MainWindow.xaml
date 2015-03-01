@@ -1,0 +1,569 @@
+﻿<Window x:Class="KeyboardTester.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:keyboard="clr-namespace:KeyboardTester"
+        Title="MainWindow" 
+        MaxHeight="250" MaxWidth="715"
+        mc:Ignorable="d" 
+        d:DesignHeight="250"
+        d:DesignWidth="715"
+        KeyDown="MainWindow_OnKeyDown"
+        KeyUp="MainWindow_OnKeyUp">
+    <Window.Resources>
+        <ResourceDictionary>
+           <Style x:Key="FunctionKeyStyle" TargetType="{x:Type keyboard:KeyboardKey}">
+                <Setter Property="DefaultPadding" Value="False" />
+            </Style>
+            
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <StackPanel Orientation="Horizontal">
+    
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel x:Name="Functions"
+                        Grid.Row="0"
+                        Margin="0,1"
+                        HorizontalAlignment="Stretch"
+                        Orientation="Horizontal">
+
+                <keyboard:KeyboardKey x:Name="Escape"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Margin="0,0,8,0"
+                                      Text="Esc"/>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="10,0">
+                <keyboard:KeyboardKey x:Name="F1"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F1"/>
+
+                <keyboard:KeyboardKey x:Name="F2"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F2"/>
+
+                <keyboard:KeyboardKey x:Name="F3"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F3"/>
+
+                <keyboard:KeyboardKey x:Name="F4"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F4"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="10,0">
+                <keyboard:KeyboardKey x:Name="F5"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F5"/>
+
+                <keyboard:KeyboardKey x:Name="F6"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F6"/>
+
+                <keyboard:KeyboardKey x:Name="F7"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F7"/>
+
+                <keyboard:KeyboardKey x:Name="F8"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F8"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="5,0">
+                <keyboard:KeyboardKey x:Name="F9"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F9"/>
+
+                <keyboard:KeyboardKey x:Name="F10"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F10"/>
+
+                <keyboard:KeyboardKey x:Name="F11"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F11"/>
+
+                <keyboard:KeyboardKey x:Name="F12"
+                                      Width="30"
+                                      Style="{StaticResource FunctionKeyStyle}"
+                                      Text="F12"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel x:Name="Numbers" 
+                        Grid.Row="1"
+                        HorizontalAlignment="Stretch"
+                        Orientation="Horizontal">
+
+                <keyboard:KeyboardKey x:Name="Oem8"
+                                      Text="¬"/>
+
+                <keyboard:KeyboardKey x:Name="D1"
+                                      Text="1"/>
+
+                <keyboard:KeyboardKey x:Name="D2"
+                                      Text="2"/>
+
+                <keyboard:KeyboardKey x:Name="D3"
+                                      Text="3"/>
+
+                <keyboard:KeyboardKey x:Name="D4"
+                                      Text="4"/>
+
+                <keyboard:KeyboardKey x:Name="D5"
+                                      Text="5"/>
+
+                <keyboard:KeyboardKey x:Name="D6"
+                                      Text="6"/>
+
+                <keyboard:KeyboardKey x:Name="D7"
+                                      Text="7"/>
+
+                <keyboard:KeyboardKey x:Name="D8"
+                                      Text="8"/>
+
+                <keyboard:KeyboardKey x:Name="D9"
+                                      Text="9"/>
+
+                <keyboard:KeyboardKey x:Name="D0"
+                                      Text="0"/>
+
+                <keyboard:KeyboardKey x:Name="OemMinus"
+                                      Text="-"/>
+
+                <keyboard:KeyboardKey x:Name="OemPlus"
+                                      Text="+"/>
+
+                <keyboard:KeyboardKey x:Name="Back"
+                                      Text="←            "/>
+
+            </StackPanel>
+
+            <StackPanel x:Name="Qwerty" 
+                        Grid.Row="2"
+                        Orientation="Horizontal">
+
+                <keyboard:KeyboardKey x:Name="Tab"
+                                      Text="Tab"/>
+
+                <keyboard:KeyboardKey x:Name="Q"
+                                      Text="Q"/>
+     
+                <keyboard:KeyboardKey x:Name="W"
+                                      Text="W"/>
+
+                <keyboard:KeyboardKey x:Name="E"
+                                      Text="E"/>
+
+                <keyboard:KeyboardKey x:Name="R"
+                                      Text="R"/>
+
+                <keyboard:KeyboardKey x:Name="T"
+                                      Text="T"/>
+
+                <keyboard:KeyboardKey x:Name="Y"
+                                      Text="Y"/>
+
+                <keyboard:KeyboardKey x:Name="U"
+                                      Text="U"/>
+
+                <keyboard:KeyboardKey x:Name="I"
+                                      Text="I"/>
+
+                <keyboard:KeyboardKey x:Name="O"
+                                      Text="O"/>
+
+                <keyboard:KeyboardKey x:Name="P"
+                                      Text="P"/>
+
+                <keyboard:KeyboardKey x:Name="OemOpenBrackets"
+                                      Text="{}{"/>
+
+                <keyboard:KeyboardKey x:Name="OemCloseBrackets"
+                                      Text="{}}"/>
+
+                <keyboard:KeyboardKey x:Name="Return"
+                                      Width="57"
+                                      Text=" Enter "/>
+            </StackPanel>
+
+            <StackPanel x:Name="Asdfgh" 
+                        Grid.Row="3"
+                        Orientation="Horizontal">
+
+                <keyboard:KeyboardKey x:Name="Capital"
+                                      Text="Caps Lock"/>
+
+                <keyboard:KeyboardKey x:Name="A"
+                                      Text="A"/>
+
+                <keyboard:KeyboardKey x:Name="S"
+                                      Text="S"/>
+
+                <keyboard:KeyboardKey x:Name="D"
+                                      Text="D"/>
+
+                <keyboard:KeyboardKey x:Name="F"
+                                      Text="F"/>
+
+                <keyboard:KeyboardKey x:Name="G"
+                                      Text="G"/>
+
+                <keyboard:KeyboardKey x:Name="H"
+                                      Text="H"/>
+
+                <keyboard:KeyboardKey x:Name="J"
+                                      Text="J"/>
+
+                <keyboard:KeyboardKey x:Name="K"
+                                      Text="K"/>
+
+                <keyboard:KeyboardKey x:Name="L"
+                                      Text="L"/>
+
+                <keyboard:KeyboardKey x:Name="OemSemicolon"
+                                      Text="; "/>
+
+                <keyboard:KeyboardKey x:Name="Oem3"
+                                      Text="@"/>
+
+                <keyboard:KeyboardKey x:Name="OemQuotes"
+                                      Text="#"/>
+
+                <keyboard:KeyboardKey x:Name="ReturnLower"
+                                      Margin="0,-5,0,0"
+                                      Width="18"
+                                      Text=" "/>
+            </StackPanel>
+
+            <StackPanel x:Name="Zxcvbn" 
+                        Grid.Row="4"
+                        Orientation="Horizontal">
+
+                <keyboard:KeyboardKey x:Name="LeftShift"
+                                      FontSize="20"
+                                      DefaultPadding="False"
+                                      PaddingOverride="5"
+                                      Text="  &#x21E7;  "/>
+
+                <keyboard:KeyboardKey x:Name="OemPipe"
+                                      Text="|"/>
+
+                <keyboard:KeyboardKey x:Name="Z"
+                                      Text="Z"/>
+
+                <keyboard:KeyboardKey x:Name="X"
+                                      Text="X"/>
+
+                <keyboard:KeyboardKey x:Name="C"
+                                      Text="C"/>
+
+                <keyboard:KeyboardKey x:Name="V"
+                                      Text="V"/>
+
+                <keyboard:KeyboardKey x:Name="B"
+                                      Text="B"/>
+
+                <keyboard:KeyboardKey x:Name="N"
+                                      Text="N"/>
+
+                <keyboard:KeyboardKey x:Name="M"
+                                      Text="M"/>
+
+                <keyboard:KeyboardKey x:Name="OemComma"
+                                      Text=" , "/>
+
+                <keyboard:KeyboardKey x:Name="OemPeriod"
+                                      Text=" . "/>
+
+                <keyboard:KeyboardKey x:Name="OemQuestion"
+                                      Text=" ? "/>
+
+                <keyboard:KeyboardKey x:Name="RightShift"
+                                      FontSize="20"
+                                      PaddingOverride="5"
+                                      DefaultPadding="False"
+                                      Text="    &#x21E7;    "/>
+            </StackPanel>
+
+            <StackPanel x:Name="Bottom" 
+                        Grid.Row="5"
+                        Orientation="Horizontal">
+
+                <keyboard:KeyboardKey x:Name="LeftCtrl"
+                                      Text="Ctrl"/>
+
+                <keyboard:KeyboardKey x:Name="LWin"
+                                      Text="&#x1F3C1;"/>
+
+                <keyboard:KeyboardKey x:Name="LeftAlt"
+                                      Text="Alt"/>
+
+                <keyboard:KeyboardKey x:Name="Space"
+                                      Text="                                             "/>
+
+                <keyboard:KeyboardKey x:Name="RightAlt"
+                                      Text="Alt Gr"/>
+
+                <keyboard:KeyboardKey x:Name="RWin"
+                                      Text="&#x1F3C1;"/>
+
+                <keyboard:KeyboardKey x:Name="Apps"
+                                      FontFamily="Segoe UI Symbol"
+                                      Text="&#xE179;"/>
+
+                <keyboard:KeyboardKey x:Name="RightCtrl"
+                                      Text="Ctrl"/>
+
+            </StackPanel>
+        </Grid>
+        
+        <Grid Margin="20,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="5"
+                                  x:Name="Left"
+                                  FontFamily="Segoe UI Symbol"
+                                  Text="&#xE112;"/>
+
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="5"
+                                  x:Name="Down"
+                                  FontFamily="Segoe UI Symbol"
+                                  Text="&#xE1FD;"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="5"
+                                  x:Name="Right"
+                                  FontFamily="Segoe UI Symbol"
+                                  Text="&#xE111;"/>
+            
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="4"
+                                  x:Name="Up"
+                                  FontFamily="Segoe UI Symbol"
+                                  Text="&#xE110;"/>
+
+            
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="1"
+                                  DefaultPadding="False"
+                                  PaddingOverride="2"
+                                  FontSize="10"
+                                  x:Name="Insert"
+                                  Text="Insert"/>
+
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="1"
+                                  DefaultPadding="False"
+                                  PaddingOverride="2"
+                                  FontSize="10"
+                                  x:Name="Home"
+                                  Text="Home"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="1"
+                                  DefaultPadding="False"
+                                  FontSize="10"
+                                  x:Name="PageUp"
+                                  Text="Page&#x0a;Up"/>
+
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="2"
+                                  DefaultPadding="False"
+                                  PaddingOverride="5"
+                                  x:Name="Delete"
+                                  Text="Del"/>
+
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="2"
+                                  DefaultPadding="False"
+                                  PaddingOverride="5"
+                                  x:Name="End"
+                                  Text="End"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="2"
+                                  x:Name="Next"
+                                  FontSize="10"
+                                  DefaultPadding="False"
+                                  Text="Page&#x0a;Down"/>
+
+
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="0"
+                                  Style="{StaticResource FunctionKeyStyle}"
+                                  x:Name="Snapshot"
+                                  FontSize="7"
+                                  Text="Prt&#x0a;Scrn"/>
+
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="0"
+                                  Style="{StaticResource FunctionKeyStyle}"
+                                  x:Name="Scroll"
+                                  FontSize="10"
+                                  Text="Scroll Lock"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="0"
+                                  Style="{StaticResource FunctionKeyStyle}"
+                                  FontSize="10"
+                                  x:Name="Pause"
+                                  Text="Pause"/>
+        </Grid>
+
+        <Grid Margin="20,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="1"
+                                  x:Name="NumLock"
+                                  FontSize="10"
+                                  DefaultPadding="False"
+                                  Text="Num&#x0a;Lock"/>
+
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="1"
+                                  x:Name="Divide"
+                                  Text="\"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="1"
+                                  x:Name="Multiply"
+                                  Text="*"/>
+
+            <keyboard:KeyboardKey Grid.Column="3"
+                                  Grid.Row="1"
+                                  x:Name="Subtract"
+                                  Text="-"/>
+            
+            
+
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="2"
+                                  x:Name="NumPad7"
+                                  Text="7"/>
+
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="2"
+                                  x:Name="NumPad8"
+                                  Text="8"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="2"
+                                  x:Name="NumPad9"
+                                  Text="*"/>
+
+            <keyboard:KeyboardKey Grid.Column="3"
+                                  Grid.Row="2"
+                                  Grid.RowSpan="2"
+                                  x:Name="Add"
+                                  Text="+"/>
+
+
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="3"
+                                  x:Name="NumPad4"
+                                  Text="4"/>
+
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="3"
+                                  x:Name="NumPad5"
+                                  Text="5"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="3"
+                                  x:Name="NumPad6"
+                                  Text="6"/>
+
+
+            
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="4"
+                                  x:Name="NumPad1"
+                                  Text="1"/>
+
+            <keyboard:KeyboardKey Grid.Column="1"
+                                  Grid.Row="4"
+                                  x:Name="NumPad2"
+                                  Text="2"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="4"
+                                  x:Name="NumPad3"
+                                  Text="3"/>
+
+            <keyboard:KeyboardKey Grid.Column="3"
+                                  Grid.Row="4"
+                                  Grid.RowSpan="2"
+                                  FontSize="10"
+                                  DefaultPadding="False"
+                                  x:Name="NumPadEnter"
+                                  Text="Enter"/>
+
+            
+            <keyboard:KeyboardKey Grid.Column="0"
+                                  Grid.Row="5"
+                                  Grid.ColumnSpan="2"
+                                  x:Name="NumPad0"
+                                  Text="0"/>
+
+            <keyboard:KeyboardKey Grid.Column="2"
+                                  Grid.Row="5"
+                                  x:Name="Decimal"
+                                  Text="."/>
+        </Grid>
+       
+    </StackPanel>
+</Window>
